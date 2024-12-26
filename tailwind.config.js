@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'cross-bg': "url('src/assets/cross.webp')",
-        'landscape-bg': "url('src/assets/landscape.webp')"
+        'cross-bg': "url('/cross.webp')",
+        'landscape-bg': "url('/landscape.webp')"
       },
       animation: {
         'fade-in': 'fadeIn 1.5s ease-out', // Custom animation name

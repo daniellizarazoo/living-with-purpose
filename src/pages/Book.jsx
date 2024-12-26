@@ -39,7 +39,7 @@ export default function Book ({clickedBack}) {
     const BookHeader = () => {
     return (
         <div className="relative bg-gradient-to-r rounded from-purple-700 to-indigo-800 px-8 py-12 text-center">
-        <div className="absolute inset-0 bg-cross-bg opacity-20 bg-cover bg-center" />
+        <div className="absolute inset-0 bg-landscape-bg opacity-20 bg-cover bg-center" />
         <div className="relative">
             <h2 className="text-4xl font-bold text-white">The book of Hope</h2>
             <p className="text-white/80 mt-2 text-lg">A Journey of hope and salvation</p>
