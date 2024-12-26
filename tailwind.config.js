@@ -7,9 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bible-bg': "url('./src/assets/bible.webp')",
-        'cross-bg': "url('./src/assets/cross.webp')",
-        'landscape-bg': "url('./src/assets/landscape.webp')"
+        'cross-bg': "url('src/assets/cross.webp')",
+        'landscape-bg': "url('src/assets/landscape.webp')"
       },
       animation: {
         'fade-in': 'fadeIn 1.5s ease-out', // Custom animation name
