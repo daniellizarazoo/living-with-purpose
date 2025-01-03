@@ -27,7 +27,7 @@ export default function Book ({clickedBack}) {
             };
             const url = fileUrls[selectedLanguage];
             if (url){
-                setNotification("Wait a little. Your gift is being downloaded.")
+                setNotification("Please wait. Your gift is downloading.")
                 const link = document.createElement("a");
                 link.href = url;
                 link.download = `${selectedLanguage}-SC.pdf`;
@@ -79,8 +79,8 @@ export default function Book ({clickedBack}) {
                 <BookDescription/>
                 </div>
                 
-                <div className="text-xl bg-stone-200 p-6 rounded-lg flex flex-col items-center justify-center text-center shadow-inner mt-6">
-                    <p className="text-xl mb-4 font-medium">Download the book in PDF in the language that you may prefer:</p>
+                <div className="text-xl bg-emerald-200 p-6 rounded-lg flex flex-col items-center justify-center text-center shadow-inner mt-6">
+                    <p className="text-xl mb-4 font-medium">Select a language to start downloading your gift🎁</p>
                     <select
                         value={language}
                         onChange={handleLanguageChange}
