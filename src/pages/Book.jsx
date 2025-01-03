@@ -4,6 +4,8 @@ import { useState } from "react";
 export default function Book ({clickedBack}) {
     
     const [language, setLanguage] = useState("");
+    const [notification, setNotification] = useState("");
+
 
     const handleLanguageChange = (e) => {
         const selectedLanguage = e.target.value;
@@ -25,12 +27,16 @@ export default function Book ({clickedBack}) {
             };
             const url = fileUrls[selectedLanguage];
             if (url){
+                setNotification("Wait a little. Your gift is being downloaded.")
                 const link = document.createElement("a");
                 link.href = url;
                 link.download = `${selectedLanguage}-SC.pdf`;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
+                setTimeout(()=>{
+                    setNotification("")
+                },6000)
             }
         };
 
@@ -94,6 +100,24 @@ export default function Book ({clickedBack}) {
                         <option value="Russian">Russian</option>
                     </select>
             </div>
+                
+                {notification && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black bg-opacity-50" />
+                    {/* Popup */}
+                    <div className="relative z-10 bg-green-500 text-white px-6 py-3 rounded shadow-lg max-w-xs text-center animate-fade-in-out">
+                    {notification}
+                    <button
+                        onClick={() => setNotification("")}
+                        className="mt-2 bg-green-700 text-white px-2 py-1 rounded text-sm focus:outline-none hover:bg-green-600"
+                    >
+                        Dismiss
+                    </button>
+                    </div>
+                </div>
+                )}
+                
                 <div className="mt-2">
                     <button 
                         className="bg-purple-600 p-2 text-white rounded text-lg"
