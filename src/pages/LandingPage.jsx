@@ -38,12 +38,11 @@ export default function LandingPage () {
 
     useEffect(() => {
         let index = initialIndex.current; 
-        console.log("Initial index :>> ", index);
 
         const intervalId = setInterval(() => {
             setMessageToShow(messages[index]); 
             index = (index + 1) % messages.length; 
-        }, 15000);
+        }, 60000);
 
         return () => clearInterval(intervalId); 
     }, [messages]);
@@ -114,11 +113,26 @@ export default function LandingPage () {
                     <MessageVerse verse={messageToShow.verse}/>
                     <MessageContent message={messageToShow.message}/>
                     <GiftButton onClick={() => {
-                        console.log("Toggling visibility");
                         setBookVisibility((p) => !p);
                         }} 
                     />
                 </div>
+                <a
+                    href="https://wa.me/+35677590460"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg absolute right-2 bottom-2 flex items-center space-x-2"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-6 h-6"
+                    >
+                        <path d="M12 2a10 10 0 0 1 8.17 15.79l.02.02-.8.23a.5.5 0 0 1-.65-.65l.23-.8A10 10 0 1 1 12 2zm0 1a9 9 0 0 0-7.45 14.07l.23.8a.5.5 0 0 0 .65.65l.8-.23A9 9 0 1 0 12 3zm-1.5 4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5zm3 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    <span>Wanna get in touch?</span>
+                </a>
             </div>
         </div>
         )
