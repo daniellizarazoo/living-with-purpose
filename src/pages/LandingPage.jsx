@@ -131,7 +131,7 @@ export default function LandingPage () {
                     >
                         <path d="M12 2a10 10 0 0 1 8.17 15.79l.02.02-.8.23a.5.5 0 0 1-.65-.65l.23-.8A10 10 0 1 1 12 2zm0 1a9 9 0 0 0-7.45 14.07l.23.8a.5.5 0 0 0 .65.65l.8-.23A9 9 0 1 0 12 3zm-1.5 4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5zm3 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5z"/>
                     </svg>
-                    <span>Wanna get in touch?</span>
+                    <span>Would you like to study the Bible?</span>
                 </a>
             </div>
         </div>
